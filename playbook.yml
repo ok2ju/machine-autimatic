@@ -1,7 +1,4 @@
 ---
-- hosts: local
-  vars_files:
-    - vars/global_env.yml
-    - vars/variables.yml
+- hosts: mac
   roles:
-    - {role: 'brew', tags: 'brew'}
+    - setup

@@ -1,0 +1,3 @@
+---
+- name: application installs
+  include: apps.yml
