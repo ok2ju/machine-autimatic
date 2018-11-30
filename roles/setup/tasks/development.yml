@@ -1,0 +1,5 @@
+---
+- name: install Golang
+  homebrew:
+    name: go
+    state: latest

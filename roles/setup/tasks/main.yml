@@ -1,3 +1,6 @@
 ---
 - name: application installs
   include: apps.yml
+
+- name: configuration
+  include: configuration.yml
