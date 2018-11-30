@@ -1,0 +1,15 @@
+---
+homebrew_url: https://raw.githubusercontent.com/Homebrew/install/master/install
+
+taps:
+  - homebrew/cask
+
+apps:
+  - ansible
+  - ansible-lint
+
+cask_apps:
+  - google-chrome
+  - telegram
+  - visual-studio-code
+  - vlc

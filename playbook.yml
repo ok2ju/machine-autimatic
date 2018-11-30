@@ -1,0 +1,7 @@
+---
+- hosts: local
+  vars_files:
+    - vars/global_env.yml
+    - vars/variables.yml
+  roles:
+    - {role: 'brew', tags: 'brew'}
