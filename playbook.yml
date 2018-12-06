@@ -1,4 +1,11 @@
 ---
 - hosts: mac
+  vars_files:
+    - vars/variables.yml
   roles:
-    - setup
+    - brew
+    - git
+    - golang
+    - zsh
+    - npm
+    - vscode
