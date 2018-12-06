@@ -1,10 +1,5 @@
 ---
-- name: Create Projects directory
-  file:
-    path: "~/Projects"
-    state: directory
-
 - name: Create GOPATH directory
   file:
-    path: "~/Projects/go"
+    path: "{{ GOPATH }}"
     state: directory
