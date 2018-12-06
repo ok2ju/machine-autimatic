@@ -13,3 +13,8 @@
     - chenxsan.vscode-standardjs
     - ms-vsliveshare.vsliveshare
     - jpoissonnier.vscode-styled-components
+
+- name: Apply vscode config
+  template:
+    src: templates/settings.j2
+    dest: ~/Library/Application\ Support/Code/User/settings.json
