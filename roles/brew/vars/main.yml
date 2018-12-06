@@ -1,0 +1,21 @@
+---
+taps:
+  - homebrew/cask
+
+apps:
+  - git
+  - wget
+  - zsh
+  - go
+  - dep
+  - node
+  - yarn
+  - zsh
+  - zsh-completions
+
+cask_apps:
+  - google-chrome
+  - iterm2
+  - docker
+  - visual-studio-code
+  - telegram

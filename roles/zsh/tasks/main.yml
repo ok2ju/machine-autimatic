@@ -1,0 +1,9 @@
+---
+- name: Install oh my zsh
+  shell: |
+    sh -c "$(curl -fsSL {{ ZSH_INSTALL_URL }})"
+
+- name: Apply ZSH config
+  template:
+    src: templates/.zshrc.j2
+    dest: ~/.zshrc

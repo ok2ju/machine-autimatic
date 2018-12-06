@@ -1,0 +1,30 @@
+---
+- name: Ensure Homebrew is installed
+  shell: /usr/bin/ruby -e "$(curl -fsSL {{ homebrew_url }})"
+
+- name: Install Homebrew
+  shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  args:
+    creates: /usr/local/bin/brew
+
+- name: Ensure Homebrew is updated
+  homebrew:
+    state: latest
+    update_homebrew: yes
+
+- name: Tap Homebrew homebrew/cask
+  homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ taps }}"
+
+- name: Install homebrew applications
+  homebrew:
+    name: "{{ apps }}"
+    state: latest
+
+- name: Install homebrew cask applications
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ cask_apps }}"

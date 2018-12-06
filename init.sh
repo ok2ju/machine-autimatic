@@ -7,18 +7,18 @@ mkdir $installdir
 
 git clone https://github.com/ok2ju/machine-autimatic.git $installdir
 if [ ! -d $installdir ]; then
-    echo "failed to find setupmac."
-    echo "git cloned failed"
+    echo "Failed to find setupmac."
+    echo "Git clone failed"
     exit 1
 else
     cd $installdir
     ansible-playbook -i ./hosts playbook.yml --verbose
 fi
 
-echo "cleaning up..."
+echo "Cleaning up..."
 
 rm -Rfv /tmp/$installdir
 
-echo "and we are done! Enjoy!"
+echo "Done!"
 
 exit 0

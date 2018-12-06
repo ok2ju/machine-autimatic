@@ -1,0 +1,15 @@
+---
+- name: Install vscode packages
+  command: code --install-extension {{ item }}
+  register: vscode_result
+  changed_when: "'already installed' not in vscode_result.stdout"
+  with_items:
+    - coenraads.bracket-pair-colorizer-2
+    - peterjausovec.vscode-docker
+    - editorconfig.editorconfig
+    - dbaeumer.vscode-eslint
+    - ms-vscode.go
+    - jaredly.reason-vscode
+    - chenxsan.vscode-standardjs
+    - ms-vsliveshare.vsliveshare
+    - jpoissonnier.vscode-styled-components

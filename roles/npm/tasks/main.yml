@@ -1,0 +1,6 @@
+---
+- name: Install NPM packages
+  npm: name={{ item }} state=present global=yes
+  with_items:
+    - eslint
+    - webpack
